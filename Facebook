@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+void signup();
+void login();
+string username,uname,name ;
+int password, pass,age ;
+
+int main()
+{
+    signup();
+}
+
+void signup()
+{
+    cout << "Facebook Connects the World.\n";
+    cout << "Enter your name and Age: ";
+    cin>> name >> age;
+    cout << "Enter Username and Password: ";
+    cin>> username >> password;
+    char ch;
+    cout << "Do you want to check your Information: y for yes and n for no ";
+    cin >> ch;
+    if(ch == 'y' || ch == 'Y')
+    {
+        cout << "details are: ";
+        cout << name <<endl << age << endl << username<<endl << password << endl;
+
+    }
+
+}
+
+void login()
+{
+    uname = username;
+    pass = password;
+
+    cout << "Login to your Account\n";
+    cout << " Enter username: ";
+    cin >> username;
+    cout << "Enter Password: ";
+    cin >> password;
+
+    int res=uname.compare(username);
+    if (password == pass && res == 0)
+    {
+        cout << "welcome to facebook! ";
+    }
+    else {
+        cout << "The Username or Password you enter was incorrrect. ";
+    }
+   
+}
+
